@@ -1,0 +1,88 @@
+.profile {
+    width: 100px;
+    height: 100px; 
+    border-radius: 100px;
+}
+
+.post-container{
+    display: flex;
+    padding: 20px;
+    justify-content: space-between;  /* 좌우 공간 자동 조절 */
+    align-items: stretch;         /* 상단 정렬 (중요!) */
+    gap: 20px;                        /* 좌우 간격 */
+    border: 1px solid #eee;
+}
+
+#special {
+    text-align: center
+}
+
+.name-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+.info{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 10px;
+}
+
+.username {
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+}
+
+.time {
+    font-size: 14px;
+    color: #666;
+}
+
+.left {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.right {
+    display: flex;
+    align-items: stretch;
+}
+
+.title{
+    font-weight: bold;
+    font-size: 20px;
+    margin-bottom: 5px;
+    color: #111;
+}
+
+.writing{
+    padding: 0 10px 10px 10px;
+}
+
+.writing p {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #555;
+}
+
+.right .box {
+    aspect-ratio: 1 / 1;
+    height: 100%; 
+    max-width: 250px;
+    max-height: 250px;
+    width: 100%;
+    overflow: hidden;
+}
+
+.right .cube {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+

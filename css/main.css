@@ -1,0 +1,398 @@
+html {
+  scroll-behavior: smooth;
+}
+
+.fade-in-up {
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+.fade-in-up.show {
+  animation: fadeUp 0.6s ease-out forwards;
+}
+
+.swal2-popup.custom-popup {
+  border-radius: 8px;
+  padding: 2rem 1.5rem;
+}
+
+.swal2-title.custom-title {
+  font-size: 1.2rem;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+}
+
+.swal2-confirm.custom-button {
+  padding: 8px 24px;
+  font-size: 0.9rem;
+  border-radius: 4px;
+}
+
+@keyframes fadeUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 링크 스타일 */
+.account-links a {
+  display: inline-block;
+  color: #3366cc;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s ease, border-bottom 0.2s ease;
+  border-bottom: 1px dashed transparent;
+}
+
+.account-links a:hover {
+  color: #003399;
+  border-bottom: 1px dashed #003399;
+}
+
+.follow-note {
+  margin-top: 1rem;
+  font-size: 0.95rem;
+  color: #ccc;
+  line-height: 1.5;
+}
+
+.profile-header {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    padding: 32px 24px 16px 24px;
+    background: linear-gradient(90deg, #e0f7fa 60%, #fff 100%);
+}
+
+.profile-img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #fff;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.profile-header h3 {
+    margin: 0 0 6px 0;
+    font-size: 22px;
+    color: #222;
+    letter-spacing: 2px;
+}
+
+.profile-time {
+    font-size: 13px;
+    color: #888;
+}
+
+body {
+  margin: 0;
+  padding-top: 100px;
+  font-family: 'Noto Sans KR', 'Noto Sans JP', 'Apple SD Gothic Neo', 'Segoe UI', sans-serif;
+}
+
+
+.top-header {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  padding: 20px 40px;
+  background-color: whitesmoke;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  background-color: whitesmoke;
+  overflow: hidden;
+}
+@media (max-width: 768px) {
+  .top-header {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .menu-left,
+  .menu-right {
+    justify-content: center;
+    flex: unset;
+  }
+
+}
+
+.menu-left {
+  display: flex;
+  justify-content: flex-start;
+  gap: 20px;
+}
+
+.menu-right {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 10px;
+  min-width: 0;           
+  white-space: nowrap;    
+  overflow: hidden;     
+}
+
+.menu-left a,
+.menu-right a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  font-size: 16px;
+  letter-spacing: 0.5px;
+}
+@media (max-width: 480px) {
+  .menu-left a,
+  .menu-right a {
+    font-size: 14px;
+  }
+
+  .profile-text p {
+    font-size: 1rem;
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+}
+
+
+.menu-right .icons a img {
+  width: 20px;
+  height: 20px;
+  margin: 0 4px;
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+}
+
+.logo img {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background-color: #222;
+  padding: 10px;
+}
+
+.profile-section {
+  background: linear-gradient(to bottom right, #2c3e50, #4b4b4b); /* 딥 블루-그레이 톤 */
+  padding: 120px 40px 60px;
+  text-align: center;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding-bottom: 40px;
+  color: #f1f1f1;
+  border-radius: 8px;
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.3);
+}
+
+
+.section-title {
+  font-size: 2.6rem;
+  font-family: 'Courier New', monospace;
+  text-align: left;
+  max-width: 1000px;
+  margin: 0 auto 60px;
+  text-align: left;
+  padding-left: 0;     
+  margin-bottom: 20px;    
+}
+
+.profile-content {
+  display: flex;
+  justify-content: left;  
+  align-items: center;
+  gap: 40px;
+  margin-top: 40px;
+  flex-wrap: wrap;
+  text-align: left;
+}
+
+.profile-content img {
+  width: 300px;         
+  height: 300px;
+  background-color: #222;
+  padding: 0;             
+  object-fit: cover;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+}
+
+.profile-text {
+  text-align: left;
+  max-width: 400px;
+  font-family: 'Noto Sans JP', sans-serif;
+  padding-top: 10px;      
+}
+
+.profile-text h3 {
+  letter-spacing: 2px;
+  font-size: 2rem;
+  margin-bottom: 8px;
+  font-weight: bold;
+  color: #f1f1f1;
+}
+
+.profile-text p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #f1f1f1;
+  margin-bottom: 10px;
+}
+
+.button-box {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 60px;
+  flex-wrap: wrap;
+}
+
+.card {
+  background-color: white;
+  padding: 20px;
+  border-radius: 20px;
+  width: 150px;
+  font-family: 'Courier New', monospace;
+  transition: transform 0.3s;
+}
+.card p{
+    font-size: 0.9rem;
+    color: #555;
+    margin-top: 10px;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card img {
+  width: 100%;
+}
+
+.intro-section {
+  position: relative;
+  background: url('/box-background.jpg') no-repeat center center;
+  background-size: cover;
+  backdrop-filter: blur(10px);
+  padding: 40px 40px 100px;
+  text-align: center;
+  border-top: 1px solid rgba(255,255,255,0.2);
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.3);
+  max-width: 1000px;
+  margin: 0 auto; 
+}
+
+.intro-section::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: rgba(255, 255, 255, 0.7); /* 흐림 효과 */
+  z-index: 1;
+}
+
+.intro-section .section-title,
+.intro-section .intro-grid {
+  position: relative;
+  z-index: 2; 
+  
+}
+
+.intro-section .section-title {
+  font-size: 2.2rem;
+  font-family: 'Courier New', monospace;
+  margin-bottom: 60px;
+  text-align: left;
+  padding-left: 10%;
+}
+
+.intro-grid {
+  display: flex;
+  flex-direction: column; 
+  gap: 40px;
+  align-items: center;   
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.intro-card {
+  background-color: white;
+  border-radius: 20px;
+  padding: 40px 40px;
+  width: 100%;                
+  max-width: 600px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  font-family: 'Courier New', monospace;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  text-align: left;
+}
+
+.intro-card h3 {
+  font-size: 1.6rem;
+  margin-bottom: 20px;
+  color: #111;
+}
+
+.x-icon {
+  width: 18px;
+  height: 18px;
+  vertical-align: middle;
+  margin-right: 4px;
+  opacity: 0.8;
+}
+
+.intro-card p {
+  font-size: 1rem;
+  color: #222;
+  line-height: 1.8;
+  white-space: pre-line;   
+}
+@media (max-width: 480px) {
+  .intro-card {
+    padding: 30px 20px;
+  }
+}
+
+.toggle-button {
+  background: none;
+  border: none;
+  color: #3366cc;
+  font-size: 0.95rem;
+  cursor: pointer;
+  margin-top: 0.5rem;
+  padding: 0;
+  transition: color 0.2s;
+}
+
+.toggle-button:hover {
+  color: #003399;
+}
+
+.expandable-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease;
+  font-size: 0.95rem;
+  color: #444;
+  line-height: 1.6;
+  margin-top: 0.5rem;
+}
+
+.expandable-content.show {
+  max-height: 300px; 
+}
