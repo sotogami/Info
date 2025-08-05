@@ -1,18 +1,208 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="utf-8">
+    <meta charset="UTF-8">
     <title>Document</title>
-    <link href="css/main.css" rel=stylesheet > 
-    </head>
+    <link href="css/main.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+    <!-- Pretendard -->
+    <link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/variable/pretendardvariable.css" rel="stylesheet">
+
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
 <body>
-    <img src="profile.jpg" class="profile">
-    <h3 style="text-align: center; font-size: 16px; letter-spacing: 5px;">Tonarui</h3>
-    <p class="title">
-        <strong style="color: red;">Web</strong> Developer</p>
-    <div class="box">
-        <p>''라고 불러주시면 됩니다.</p>
-        <p>20↑ / 웹 개발자 신입입니다.</p>
+    <header class="top-header">
+
+    <div class="menu-left">
+        <a href="#profile">PROFILE</a>
+        <a href="#introduction">About Me</a>
+        <a href="#">WORKS</a>
     </div>
+
+    <div class="logo">
+        <img src="profile.jpg" alt="Logo">
+    </div>
+
+    <div class="menu-right">
+        <div class="icons">
+        <a href="https://x.com/hystrix1128"><img src="icon-x.png" alt="X"></a>
+        </div>
+        <a href="#">CONTACT</a>
+    </div>
+
+    </header>
+
+
+    <section class="profile-section fade-in-up" id="profile">
+        <h2 class="section-title">Profile</h2>
+
+        <div class="profile-content">
+            <img src="profile2.jpg" alt="profile">
+            <div class="profile-text">
+                <h3>Tonarui</h3>
+                <p>20↑ / 웹 개발자 신입</p>
+                <p>좋아하는 것, 하고 싶은 것을 합니다.<br> 동시에 하고 싶은 게 너무 많다! <s>돈이 없다!</s></p>
+            </div>
+        </div>
+
+        <div class="button-box">
+            <div class="card">
+                <img src="works.png" alt="Works">
+                <p>WORKS</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="intro-section fade-in-up" id="introduction">
+        <h2 class="section-title">About Me</h2>
+        <div class="intro-grid">
+            <div class="intro-card">
+            <h3>MAIN</h3>
+            <div class="account-links">
+                <p>
+                
+                <a href="https://x.com/hystrix1128" target="_blank">주계정 (사담, 덕질, 창작, 개인백업 등 All)</a>
+                </p>
+                <p>
+                <a href="https://x.com/RuaPu7" target="_blank">작곡, 일본어 계정 (현재 동결)</a>
+                </p>
+                <p>
+                <a href="#"><s>초슈퍼 금손이 되면 넣을 계정 / 언제쯤될까...</s></a>
+                </p>
+            </div>
+            <p class="follow-note">
+                좋아하는 동인 작곡가와 그림러분들의 계정을 구독하고 있습니다. 
+                마음과 탐라대화 위주고, 일상트는 가끔 올립니다.
+                <br>
+                <strong>트친소를 올리지 않습니다.</strong><br>
+                보통 제가 성향이 맞으면 찾아가 팔로우를 합니다(...)
+                구독은 자유롭게 해주시고, 맞팔 여부는 트윗 성향이 맞거나 창작자분에 한해 하고 있습니다. 양해 부탁드립니다.
+            </p>
+            <button class="toggle-button">▼ 지뢰? 불호?</button>
+            <div class="expandable-content">
+                <p>
+                    블루 아카이브 등 의도가 불순하다고 느껴지는 게임은 개인적으로 선호하지 않으며, 스루는 가능합니다.<br>
+                    <strong style="color: red;">특정 곡이나 작곡가에 대한 비하・비난 트윗을 확인할 경우 즉시 차단합니다.</strong>
+                    <br>창작자와 그 작품에 대한 최소한의 존중을 부탁드립니다.
+                </p>
+            </div>
+            </div>
+
+            <div class="intro-card">
+            <h3>GAME</h3>
+            <p>
+                닌텐도 스위치2 게임(커비,포켓몬등)과 Arcaea를 합니다
+                Rhythm
+                - Arcaea (12.31)
+                - <s>maimai (15550)</s>
+                <br>
+                스위치 게임은 평소엔 일절 언급을 없습니다만, 관련 희소식에는 RT나 트윗으로 반응할 수 있습니다.<br>
+                특별히 의미가 있는 게 아니라면, 게임 관련 트윗 사진은 하루 또는 익일 내에 지웁니다. 미디어 탭을 자주 스스로 봐서 그런 거니 양해 부탁드립니다.
+                게임을 즐기고 있구나 정도로만 봐주시면 감사하겠습니다.
+            </p>
+            </div>
+            <div class="intro-card">
+            <h3>ART</h3>
+            <p>
+                Arcaea 관련 그림을 트윗 합니다.
+                펜을 잡은 경력이 얼마되지 않아 그림이 다소 미흡할 수 있습니다.
+                꾸준히 공부중입니다.
+            </p>
+            </div>
+            <div class="intro-card">
+            <h3>MUSIC</h3>
+            <p>
+                주로 동인 음악을 들으며 작업합니다. EDM 계열을 좋아하며
+                月代 彩(Tsukishiro Hikari)와 Taishi 님을 가장 좋아합니다.
+                <br>
+                불규칙하게 영감을 받아 작곡하고, 완성되면 트윗으로 공유합니다.
+                음악이 불편하시다면 스루해주세요.
+            </p>
+            </div>
+        </div>
+    </section>
+
 </body>
+<script>
+    function showComingSoonAlert() {
+    Swal.fire({
+      title: '준비 중입니다',
+      icon: 'info',
+      iconColor: '#ffffff',
+      background: '#1e1e1e',
+      color: '#f5f5f5',
+      confirmButtonColor: '#444',
+      confirmButtonText: '확인',
+      scrollbarPadding: false,
+      customClass: {
+        popup: 'custom-popup',
+        title: 'custom-title',
+        confirmButton: 'custom-button'
+      }
+    });
+  }
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        const targetId = this.getAttribute('href');
+        if (targetId.length > 1) {
+        e.preventDefault();
+        const targetEl = document.querySelector(targetId);
+        if (targetEl) {
+            const yOffset = -120; 
+            const y = targetEl.getBoundingClientRect().top + window.pageYOffset + yOffset;
+            window.scrollTo({ top: y, behavior: 'smooth' });
+        }
+        }
+    });
+    });
+
+  // <a href="#">WORKS</a>
+  document.querySelectorAll('a[href="#"]').forEach(el => {
+    el.addEventListener('click', function (e) {
+      e.preventDefault();
+      showComingSoonAlert();
+    });
+  });
+
+  // .card 클릭 시
+  const worksCard = document.querySelector('.card');
+  if (worksCard) {
+    worksCard.addEventListener('click', function () {
+      showComingSoonAlert();
+    });
+  }
+  const fadeEls = document.querySelectorAll('.fade-in-up');
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      const el = entry.target;
+      if (entry.isIntersecting) {
+        el.classList.add('show');
+        el.style.animation = 'none'; 
+        void el.offsetWidth;       
+        el.style.animation = '';
+        el.classList.add('show');
+      } else {
+        el.classList.remove('show');
+      }
+    });
+  }, {
+    threshold: 0.1
+  });
+
+  fadeEls.forEach((el, i) => {
+    el.style.animationDelay = `${i * 0.2}s`;
+    observer.observe(el);
+  });
+
+  const toggleBtn = document.querySelector('.toggle-button');
+  const content = document.querySelector('.expandable-content');
+
+  toggleBtn.addEventListener('click', () => {
+    content.classList.toggle('show');
+    toggleBtn.textContent = content.classList.contains('show') ? '▲ 접기' : '▼ 지뢰? 불호?';
+  });
+</script>
+
+
 </html>
