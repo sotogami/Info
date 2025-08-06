@@ -63,10 +63,12 @@
             <div class="account-links">
                 <p>
                 '토나'라고 불러주세요.<br>
-                <a href="https://x.com/hystrix1128" target="_blank">주계정 (사담, 덕질, 창작, 개인백업 등 All)  << 누를 시 이동</a>
+                <a href="https://x.com/hystrix1128" target="_blank">주계정 (사담, 덕질, 창작, 개인백업 등 All)  
+                << 누를 시 이동</a>
                 </p>
                 <p>
-                <a href="https://x.com/RuaPu7" target="_blank">작곡, 일본어 계정 (현재 동결) << 누를 시 이동</a>
+                <a href="https://x.com/RuaPu7" target="_blank">작곡, 일본어 계정 (현재 동결)
+                << 누를 시 이동</a>
                 </p>
                 <p>
                 <a href="#"><s>초슈퍼 금손이 되면 넣을 계정 / 언제쯤될까...</s></a>
@@ -181,16 +183,17 @@
   const fadeEls = document.querySelectorAll('.fade-in-up');
 
   const observer = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    const el = entry.target;
-    if (entry.isIntersecting && !el.classList.contains('show')) {
-      el.classList.add('show');
-    }
+    entries.forEach(entry => {
+      const el = entry.target;
+      if (entry.isIntersecting) {
+        el.classList.add('show');
+      } else {
+        el.classList.remove('show');  
+      }
+    });
+  }, {
+    threshold: 0.1
   });
-}, {
-  threshold: 0.1
-});
-
 
   fadeEls.forEach((el, i) => {
     el.style.animationDelay = `${i * 0.2}s`;
