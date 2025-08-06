@@ -526,3 +526,57 @@ header {
 .expandable-content.show {
   max-height: 500px; 
 }
+
+.site-footer {
+  background-color: #1e1e1e;
+  color: #ccc;
+  text-align: center;
+  padding: 20px 10px;
+  font-size: 0.85rem;
+  margin-top: 60px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.site-footer .footer-content {
+  max-width: 1000px;
+  margin: 0 auto;
+  opacity: 0.9;
+}
+
+.footer-quote {
+  font-style: italic;
+  margin-top: 10px;
+  color: #aaa;
+}
+
+#backToTop {
+  position: fixed;
+  bottom: 40px;
+  right: 30px;
+  z-index: 999;
+  background: rgba(180, 180, 180, 0.25); 
+  color: #555;
+  border: none;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  font-size: 22px;
+  cursor: pointer;
+  backdrop-filter: blur(6px);
+  box-shadow: 0 0 10px rgba(100, 100, 100, 0.3);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease, background 0.3s ease, color 0.3s ease;
+}
+
+#backToTop.show {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+#backToTop:hover {
+  background: rgba(150, 150, 150, 0.35);
+  color: #333;
+  box-shadow: 0 0 16px rgba(120, 120, 120, 0.5);
+}
+

@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>덕질좋아</title>
     <link href="css/main.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
     <!-- SUIT -->
@@ -22,7 +22,7 @@
 
     <div class="menu-left">
         <a href="#profile">PROFILE</a>
-        <a href="#introduction">About Me</a>
+        <a href="#introduction">About</a>
         <a href="#">WORKS</a>
     </div>
 
@@ -63,7 +63,7 @@
     </section>
 
     <section class="intro-section fade-in-up" id="introduction">
-        <h2 class="section-title">About Me</h2>
+        <h2 class="section-title">About</h2>
         <div class="intro-grid">
             <div class="intro-card">
             <h3>MAIN</h3>
@@ -106,7 +106,7 @@
             <p>
                 닌텐도 스위치2 게임(커비,포켓몬등)과 Arcaea를 합니다
                 리듬 게임 성과(2025.08 기준)
-                - Arcaea (12.31)
+                - Arcaea (12.31) 친구 코드 : 397 087 285 
                 - <s>maimai (15550)</s> <strong>할 계획이 없습니다</strong>
                 <br>
                 스위치 게임은 평소엔 일절 언급을 없습니다만, 관련 희소식에는 RT나 트윗으로 반응할 수 있습니다.<br>
@@ -136,6 +136,19 @@
             </div>
         </div>
     </section>
+
+    <footer class="site-footer">
+    <div class="footer-content">
+      <p>Last updated: <span id="last-update"></span></p>
+      <p>© 2025 Tonarui</p>
+      <p class="footer-quote">"이 페이지는 오타쿠의 피, 눈물, 새벽잠으로 만들어졌습니다."</p>
+    </div>
+  </footer>
+
+  <button id="backToTop" title="맨 위로" aria-label="Back to top">
+    ↑
+  </button>
+
 
 </body>
 <script>
@@ -213,6 +226,29 @@
     content.classList.toggle('show');
     toggleBtn.textContent = content.classList.contains('show') ? '▲ 접기' : '▼ 지뢰? 불호?';
   });
+
+  const updatedDate = new Date(document.lastModified);
+  const formatted = updatedDate.toLocaleDateString("ko-KR", {
+    year: 'numeric',
+    month: '2-digit',
+    day: '2-digit'
+  });
+  document.getElementById("last-update").textContent = formatted;
+
+  const backToTopBtn = document.getElementById("backToTop");
+
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 300) {
+      backToTopBtn.classList.add("show");
+    } else {
+      backToTopBtn.classList.remove("show");
+    }
+  });
+
+  backToTopBtn.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+
 </script>
 
 
