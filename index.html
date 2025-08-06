@@ -1,6 +1,17 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <style>
+      img {
+        -webkit-user-drag: none;
+        user-select: none;
+        pointer-events: none;
+      }
+
+      body {
+        -webkit-touch-callout: none;
+      }
+    </style>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>덕질좋아</title>
     <link href="css/main.css" rel="stylesheet">
@@ -17,7 +28,7 @@
 
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
-<body>
+<body oncontextmenu="return false" onselectstart="return false" ondragstart="return false">
     <header class="top-header">
 
     <div class="menu-left">
