@@ -159,7 +159,14 @@ body {
   }
 
   .logo {
-    margin: 10px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+  }
+
+  .logo img {
+    margin: 0 auto;
   }
 }
 
@@ -173,6 +180,24 @@ header {
   background-color: whitesmoke;
   overflow: hidden;
 }
+
+header.shrink {
+  padding: 8px 20px !important;
+  transition: all 0.3s ease;
+}
+
+.top-header.shrink .logo img {
+  width: 36px;
+  height: 36px;
+  padding: 6px;
+  transition: all 0.3s ease;
+}
+
+.top-header.shrink .menu-left a,
+.top-header.shrink .menu-right a {
+  font-size: 14px;
+}
+
 
 .menu-left {
   display: flex;
