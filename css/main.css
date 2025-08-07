@@ -49,19 +49,19 @@ html {
 
 /* 링크 스타일 */
 .account-links a {
-  display: inline-block;
+  display: inline;
   color: #3366cc;
   text-decoration: none;
   font-weight: 500;
   transition: color 0.2s ease, border-bottom 0.2s ease;
   border-bottom: 1px dashed transparent;
+  word-break: keep-all; 
 }
 
 .account-links a:hover {
   color: #003399;
   border-bottom: 1px dashed #003399;
 }
-
 .follow-note {
   margin-top: 1rem;
   font-size: 0.95rem;
@@ -137,20 +137,29 @@ body {
   .top-header {
     display: flex;
     flex-direction: column;
+    align-items: center; 
+    justify-content: center;
     padding: 10px 20px;
+    gap: 12px; 
   }
 
   .menu-left,
   .menu-right {
-    flex-wrap: wrap;
+    display: flex;
     justify-content: center;
+    align-items: center; 
+    flex-wrap: wrap;
     gap: 10px;
-    margin-top: 10px;
+    margin-top: 0;
   }
 
   .menu-left a,
   .menu-right a {
     font-size: 14px;
+  }
+
+  .logo {
+    margin: 10px 0;
   }
 }
 
@@ -215,12 +224,17 @@ header {
 .logo {
   display: flex;
   justify-content: center;
+  align-items: center;
+  height: 100%; 
+  transform: translateY(-2px);
 }
 
+
 .logo img {
-  width: 70px;
-  height: 70px;
+  width: 48px;
+  height: 48px;
   border-radius: 50%;
+  object-fit: cover;
   background-color: #222;
   padding: 10px;
 }
