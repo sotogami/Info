@@ -1,36 +1,36 @@
-$(document).ready(function () {
+$(function () {
   const $contactLink = $('#contact-link');
-  const $contactPopupContainer = $('#contact-popup');
+  const $popup = $('#contact-popup');
 
-  // CONTACT 클릭 시 팝업 HTML 로드
   $contactLink.on('click', function (e) {
-    e.preventDefault(); // 페이지 이동 방지
-
-    // 팝업이 이미 로드되어 있다면 다시 로드하지 않음
-    if ($contactPopupContainer.is(':empty')) {
-      // 외부 HTML 파일을 로드하여 팝업에 삽입
-      $.get('html/contact-popup.html', function (data) {
-        // 팝업을 삽입하고 나타나게 함
-        $contactPopupContainer.html(data).fadeIn(); 
+    e.preventDefault();
+    if ($popup.is(':empty')) {
+      $.get('html/contact-popup.html', function (html) {
+        $popup.html(html).addClass('open');
       }).fail(function (jqXHR, textStatus, errorThrown) {
         console.error('HTML 파일 로드 실패:', textStatus, errorThrown);
       });
     } else {
-      $contactPopupContainer.fadeIn(); // 이미 로드된 팝업을 다시 표시
+      $popup.addClass('open');
     }
   });
 
-  // 팝업 내부에서 닫기 버튼 클릭 시 팝업 닫기
-  $contactPopupContainer.on('click', '#close-popup', function () {
-    $contactPopupContainer.fadeOut(); // 팝업 닫기
+  $popup.on('click', '#close-popup', function () {
+    $popup.removeClass('open');
   });
 
-  // 팝업 배경 클릭 시 팝업 닫기
   $(window).on('click', function (e) {
-    if ($(e.target).is($contactPopupContainer)) {
-      $contactPopupContainer.fadeOut(); // 팝업 닫기
+    if ($(e.target).is($popup)) {
+      $popup.removeClass('open');
     }
   });
+
+  $(document).on('keydown', function (e) {
+    if (e.key === 'Escape') {
+      $popup.removeClass('open');
+    }
+  });
+
 
   // WORKS 링크에 대한 준비 중 알림
   function showComingSoonAlert() {
