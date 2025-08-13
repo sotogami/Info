@@ -656,79 +656,60 @@ header.shrink {
   box-shadow: 0 0 16px rgba(120, 120, 120, 0.5);
 }
 
-/* 팝업 기본 스타일 */
+/* 팝업  */
 .popup {
-  display: none; /* 기본적으로 팝업 숨기기 */
+  display: none; 
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.7); /* 어두운 배경 */
-  z-index: 1000; /* 팝업 우선순위 높임 */
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 1000; 
   display: flex;
-  justify-content: center; /* 수평 중앙 정렬 */
-  align-items: center; /* 수직 중앙 정렬 */
+  justify-content: center; 
+  align-items: center; 
 }
 
-/* 팝업 콘텐츠 스타일 */
 .popup-content {
-  background-color: #fff; /* 흰색 배경 */
+  background-color: #fff; 
   padding: 20px;
-  width: 400px; /* 팝업 크기 */
-  border-radius: 8px; /* 둥근 모서리 */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* 그림자 */
-  position: relative; /* 닫기 버튼을 절대 위치로 배치하기 위한 기준 */
-  font-family: 'Noto Sans KR', sans-serif; /* 페이지와 일관된 폰트 */
+  width: 500px; 
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); 
+  position: relative; 
+  font-family: 'Noto Sans KR', sans-serif; 
 }
 
-/* 닫기 버튼 */
 .close-btn {
   position: absolute;
   top: 10px;
   right: 10px;
   font-size: 24px;
   cursor: pointer;
-  color: #333; /* 버튼 색상 */
+  color: #333; 
 }
 
-/* 이메일 링크 스타일 */
 .popup-content p {
   font-size: 1rem;
   color: #333;
   margin-bottom: 20px;
 }
 
-.popup-content a {
-  color: #1DA1F2; /* 트위터 X 색상 */
-  text-decoration: none;
-  font-weight: bold;
-  transition: color 0.2s ease;
-}
-
-.popup-content a:hover {
-  color: #0d95e8; /* 트위터 X 링크 hover 색상 */
-}
-
-/* 트위터 X DM 버튼 스타일 */
 button {
   padding: 10px 20px;
-  background-color: #14171A; /* X (트위터) 검은색 배경 */
+  background-color: #14171A;
   color: white;
   border: none;
   border-radius: 4px;
   cursor: pointer;
   font-size: 16px;
   transition: background-color 0.3s ease;
-  width: 100%; /* 버튼이 전체 너비를 차지하도록 */
+  width: 100%; 
   margin-top: 20px;
 }
 
-button:hover {
-  background-color: #10171A; /* 버튼 hover 색상 */
-}
 
-/* 팝업 닫을 때 애니메이션 */
 @keyframes fadeInPopup {
   0% {
     opacity: 0;
@@ -740,8 +721,35 @@ button:hover {
   }
 }
 
-/* 팝업 표시 시 애니메이션 */
 .popup-content {
   animation: fadeInPopup 0.5s ease-out;
 }
 
+/* 웹사이트 제작 의뢰 메시지 스타일 */
+.contact-notice {
+  background-color: #f8f9fa; 
+  color: #333; 
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
+  font-size: 1rem; 
+  font-family: 'Noto Sans KR', sans-serif; 
+  line-height: 1.6; 
+  text-align: center; 
+  margin-top: 30px; 
+  border: 1px solid #e0e0e0; 
+}
+
+.contact-notice br {
+  margin: 10px 0; 
+}
+
+.contact-notice:hover {
+  background-color: #e2e6ea; 
+  cursor: pointer;
+}
+
+.contact-notice span {
+  color: #007bff; 
+  font-weight: bold;
+}

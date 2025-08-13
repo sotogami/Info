@@ -7,9 +7,9 @@
 .post-container{
     display: flex;
     padding: 20px;
-    justify-content: space-between;  /* 좌우 공간 자동 조절 */
-    align-items: stretch;         /* 상단 정렬 (중요!) */
-    gap: 20px;                        /* 좌우 간격 */
+    justify-content: space-between;  
+    align-items: stretch;         
+    gap: 20px;                        
     border: 1px solid #eee;
 }
 
