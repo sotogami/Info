@@ -10,9 +10,6 @@ $(document).ready(function () {
     if ($contactPopupContainer.is(':empty')) {
       // 외부 HTML 파일을 로드하여 팝업에 삽입
       $.get('html/contact-popup.html', function (data) {
-        console.log('HTML 파일이 정상적으로 로드되었습니다.');
-        console.log(data); // 로드된 HTML 내용 확인
-
         // 팝업을 삽입하고 나타나게 함
         $contactPopupContainer.html(data).fadeIn(); 
       }).fail(function (jqXHR, textStatus, errorThrown) {

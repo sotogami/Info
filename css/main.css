@@ -664,21 +664,22 @@ header.shrink {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5); /* 배경 어두워지기 */
+  background-color: rgba(0, 0, 0, 0.7); /* 어두운 배경 */
   z-index: 1000; /* 팝업 우선순위 높임 */
+  display: flex;
+  justify-content: center; /* 수평 중앙 정렬 */
+  align-items: center; /* 수직 중앙 정렬 */
 }
 
 /* 팝업 콘텐츠 스타일 */
 .popup-content {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background-color: white;
+  background-color: #fff; /* 흰색 배경 */
   padding: 20px;
-  width: 300px;
-  border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  width: 400px; /* 팝업 크기 */
+  border-radius: 8px; /* 둥근 모서리 */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* 그림자 */
+  position: relative; /* 닫기 버튼을 절대 위치로 배치하기 위한 기준 */
+  font-family: 'Noto Sans KR', sans-serif; /* 페이지와 일관된 폰트 */
 }
 
 /* 닫기 버튼 */
@@ -688,36 +689,59 @@ header.shrink {
   right: 10px;
   font-size: 24px;
   cursor: pointer;
+  color: #333; /* 버튼 색상 */
 }
 
-/* 폼 스타일 */
-#contact-form {
-  display: flex;
-  flex-direction: column;
+/* 이메일 링크 스타일 */
+.popup-content p {
+  font-size: 1rem;
+  color: #333;
+  margin-bottom: 20px;
 }
 
-#contact-form label {
-  margin-bottom: 8px;
+.popup-content a {
+  color: #1DA1F2; /* 트위터 X 색상 */
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.2s ease;
 }
 
-#contact-form input,
-#contact-form textarea {
-  margin-bottom: 12px;
-  padding: 8px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
+.popup-content a:hover {
+  color: #0d95e8; /* 트위터 X 링크 hover 색상 */
 }
 
-#contact-form button {
-  padding: 10px;
-  background-color: #007bff;
+/* 트위터 X DM 버튼 스타일 */
+button {
+  padding: 10px 20px;
+  background-color: #14171A; /* X (트위터) 검은색 배경 */
   color: white;
   border: none;
   border-radius: 4px;
   cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+  width: 100%; /* 버튼이 전체 너비를 차지하도록 */
+  margin-top: 20px;
 }
 
-#contact-form button:hover {
-  background-color: #0056b3;
+button:hover {
+  background-color: #10171A; /* 버튼 hover 색상 */
+}
+
+/* 팝업 닫을 때 애니메이션 */
+@keyframes fadeInPopup {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 팝업 표시 시 애니메이션 */
+.popup-content {
+  animation: fadeInPopup 0.5s ease-out;
 }
 
