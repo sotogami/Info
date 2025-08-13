@@ -1,37 +1,3 @@
-$(function () {
-  const $contactLink = $('#contact-link');
-  const $popup = $('#contact-popup');
-
-  $contactLink.on('click', function (e) {
-    e.preventDefault();
-    if ($popup.is(':empty')) {
-      $.get('html/contact-popup.html', function (html) {
-        $popup.html(html).addClass('open');
-      }).fail(function (jqXHR, textStatus, errorThrown) {
-        console.error('HTML 파일 로드 실패:', textStatus, errorThrown);
-      });
-    } else {
-      $popup.addClass('open');
-    }
-  });
-
-  $popup.on('click', '#close-popup', function () {
-    $popup.removeClass('open');
-  });
-
-  $(window).on('click', function (e) {
-    if ($(e.target).is($popup)) {
-      $popup.removeClass('open');
-    }
-  });
-
-  $(document).on('keydown', function (e) {
-    if (e.key === 'Escape') {
-      $popup.removeClass('open');
-    }
-  });
-
-
   // WORKS 링크에 대한 준비 중 알림
   function showComingSoonAlert() {
     Swal.fire({
@@ -128,4 +94,4 @@ $(function () {
       $header.removeClass('shrink');
     }
   });
-});
+

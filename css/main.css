@@ -661,39 +661,49 @@ header.shrink {
   display: none;
   position: fixed;
   inset: 0;
+  height: 100dvh;
   background: rgba(0,0,0,0.6);
   z-index: 999;
-  justify-content: center;
-  align-items: center;
-  opacity: 0;
-  transition: opacity .2s ease;
+  padding: 16px;
+  box-sizing: border-box;
 }
 
 .popup.open {
-  display: flex;
-  opacity: 1;
+  display: grid;
+  place-items: center;
 }
 
+@keyframes popupFade {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+/* 팝업 박스 */
 .popup-content {
   background: #fff;
   color: #222;
   padding: 20px;
   border-radius: 12px;
-  max-width: 600px;
-  width: 90%;
+  width: 100%;
+  max-width: 360px;                          /* 모바일에서 적당한 폭 */
+  max-height: calc(100dvh - 32px);
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
   box-sizing: border-box;
   text-align: center;
   position: relative;
-  font-family: 'Noto Sans KR', sans-serif; 
+  font-family: 'Noto Sans KR', sans-serif;
+  margin: auto;                               /* 안전망 */
 }
 
-.close-btn {
-  position: absolute;
-  top: 10px;
-  right: 15px;
-  font-size: 24px;
-  cursor: pointer;
+/* 스크롤 잠금(선택) */
+.body--lock {
+  overflow: hidden;
+  touch-action: none;
 }
+
+/* 닫기 버튼 등 나머지는 그대로 */
+.close-btn { position:absolute; top:10px; right:15px; font-size:24px; cursor:pointer; }
 
 .contact-notice {
   font-size: 0.9rem;
