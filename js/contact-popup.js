@@ -1,11 +1,7 @@
 $(function () {
   const $contactLink = $('#contact-link');
   const $popup = $('#contact-popup');
-
-  // body 바로 아래로 이동 (iOS transform 버그 회피)
   $popup.appendTo('body');
-
-  // 혹시 이전에 붙은 핸들러가 있으면 제거(다중 포함 대비)
   $popup.off('.popup');
   $(document).off('.popup');
   $contactLink.off('.popup');
@@ -16,7 +12,7 @@ $(function () {
     if ($popup.is(':empty')) {
       $.get('html/contact-popup.html', function (html) {
         $popup.html(html).addClass('open');
-        $('body').addClass('body--lock');     // 스크롤 잠금(선택)
+        $('body').addClass('body--lock');    
       });
     } else {
       $popup.addClass('open');
